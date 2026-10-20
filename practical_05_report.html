@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Practical 05 Submission - SCSE3040</title>
+<style>
+  @page {
+    size: A4;
+    margin: 15mm 15mm 15mm 15mm;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #1f2937;
+    line-height: 1.5;
+    font-size: 10.5pt;
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+  }
+  .page {
+    page-break-after: always;
+    min-height: 260mm;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  .page:last-child {
+    page-break-after: avoid;
+  }
+  .header {
+    border-bottom: 2px solid #2563eb;
+    padding-bottom: 10px;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .title-area h1 {
+    font-size: 18pt;
+    font-weight: 700;
+    color: #1e3a8a;
+    margin: 0 0 4px 0;
+  }
+  .title-area p {
+    font-size: 10.5pt;
+    color: #4b5563;
+    margin: 0;
+    font-weight: 500;
+  }
+  .badge {
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    color: #1d4ed8;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 9.5pt;
+  }
+  .section {
+    margin-bottom: 18px;
+  }
+  .section-title {
+    font-size: 11.5pt;
+    font-weight: 700;
+    color: #1e40af;
+    margin: 0 0 8px 0;
+    display: flex;
+    align-items: center;
+    border-left: 3px solid #2563eb;
+    padding-left: 8px;
+  }
+  .meta-grid {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    row-gap: 8px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+  }
+  .meta-label {
+    font-weight: 600;
+    color: #475569;
+    font-size: 10pt;
+  }
+  .meta-value {
+    color: #0f172a;
+    font-weight: 500;
+    font-size: 10pt;
+  }
+  .repo-box {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 8px;
+    padding: 12px 16px;
+  }
+  .repo-link {
+    color: #15803d;
+    font-weight: 600;
+    font-size: 10.5pt;
+    word-break: break-all;
+    text-decoration: underline;
+    display: block;
+    margin-bottom: 4px;
+  }
+  pre.code-block {
+    background: #0f172a;
+    color: #f1f5f9;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-family: "Cascadia Mono", "Consolas", monospace;
+    font-size: 9pt;
+    line-height: 1.45;
+    margin: 0;
+    border: 1px solid #334155;
+  }
+  .screenshot-container {
+    text-align: center;
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  .screenshot-container img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+  }
+  .number-box {
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-left: 4px solid #2563eb;
+    padding: 12px 16px;
+    border-radius: 0 8px 8px 0;
+    font-size: 10.5pt;
+    color: #1e3a8a;
+    line-height: 1.5;
+  }
+  .footer-note {
+    margin-top: auto;
+    font-size: 8.5pt;
+    color: #94a3b8;
+    text-align: right;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 6px;
+  }
+</style>
+</head>
+<body>
+
+<!-- PAGE 1 -->
+<div class="page">
+  <div class="header">
+    <div class="title-area">
+      <h1>Practical 05 &mdash; Laboratory Submission Report</h1>
+      <p>Settings in a File, Bugs Caught by a Robot &middot; SCSE3040 MLOps</p>
+    </div>
+    <div class="badge">Session 2026-27</div>
+  </div>
+
+  <!-- 1. Student Details -->
+  <div class="section">
+    <div class="section-title">1. Student and Laboratory Session Details</div>
+    <div class="meta-grid">
+      <div class="meta-label">Student Name:</div>
+      <div class="meta-value">Parth Rawat</div>
+      <div class="meta-label">Roll Number:</div>
+      <div class="meta-value">S24CSEU1345</div>
+      <div class="meta-label">Batch:</div>
+      <div class="meta-value">CSE (Batch 2024-28)</div>
+      <div class="meta-label">Laboratory Date:</div>
+      <div class="meta-value">October 20, 2026</div>
+      <div class="meta-label">Institution:</div>
+      <div class="meta-value">Bennett University &middot; School of Computer Science Engineering & Technology</div>
+    </div>
+  </div>
+
+  <!-- 2. Repository Link -->
+  <div class="section">
+    <div class="section-title">2. Repository Link (Written out in full as text)</div>
+    <div class="repo-box">
+      <a class="repo-link" href="https://github.com/Daemon-01/MLOps.git">https://github.com/Daemon-01/MLOps.git</a>
+      <a class="repo-link" href="https://github.com/Daemon-01/MLOps">https://github.com/Daemon-01/MLOps</a>
+    </div>
+  </div>
+
+  <!-- 3. config.yaml contents -->
+  <div class="section">
+    <div class="section-title">3. Contents of config.yaml (Pasted as text)</div>
+    <pre class="code-block"># Settings for the delivery-time model.
+# Change values here, never in the code.
+
+data:
+  path: ../data/delivery_times.csv
+  features:
+    - distance_km
+    - prep_time_min
+    - traffic_level
+    - rain
+  target: delivery_min
+
+split:
+  test_size: 0.2
+  seed: 42
+
+model:
+  name: linear_regression
+
+training:
+  max_rows: 300</pre>
+  </div>
+
+  <div class="footer-note">Page 1 of 2 &middot; Practical 05 Submission &middot; Parth Rawat (S24CSEU1345)</div>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page">
+  <div class="header">
+    <div class="title-area">
+      <h1>Practical 05 &mdash; Test Results &amp; Model Verification</h1>
+      <p>Automated Testing with pytest &middot; Refactoring Verification</p>
+    </div>
+    <div class="badge">10 / 10 Tests Passing</div>
+  </div>
+
+  <!-- 4. Terminal Screenshot -->
+  <div class="section">
+    <div class="section-title">4. Screenshot of Terminal after Running pytest (Full Summary Line Visible)</div>
+    <div class="screenshot-container">
+      <img src="pytest_terminal_screenshot.png" alt="Terminal screenshot of pytest passing all 10 tests with summary line">
+    </div>
+  </div>
+
+  <!-- 5. Refactor Number Statement -->
+  <div class="section">
+    <div class="section-title">5. Model Output Statement (Before vs. After Refactor)</div>
+    <div class="number-box">
+      <strong>One-line Statement:</strong> Before the refactor, the hardcoded model training produced an MAE of <strong>1.92 minutes</strong>, and after refactoring to use <code>config.yaml</code>, the package produces the identical honest MAE of <strong>1.92 minutes</strong> on the complete dataset (and <strong>2.18 minutes</strong> when restricted to the configured 300-row limit in Task T1).
+    </div>
+  </div>
+
+  <div class="footer-note">Page 2 of 2 &middot; Practical 05 Submission &middot; Parth Rawat (S24CSEU1345)</div>
+</div>
+
+</body>
+</html>
